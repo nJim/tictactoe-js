@@ -1,7 +1,9 @@
 import React from "react";
 
-const Box = ({ row, col }) => (
-  <div className={`box row-${row} col-${col}`}>Cell</div>
+const Box = ({ id, value, handleClick }) => (
+  <div onClick={() => handleClick(id)} className="box">
+    {value}
+  </div>
 );
 
 export default Box;
