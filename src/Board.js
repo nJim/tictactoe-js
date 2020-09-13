@@ -3,11 +3,13 @@ import Box from "./Box";
 
 const Board = () => {
   const [values, setValues] = useState(Array(9).fill(null));
+  const [currentPlayer, setPlayer] = useState("X");
 
   const handleClick = (id) => {
     const updated = [...values];
-    updated[id] = values[id] == "X" ? "" : "X";
+    updated[id] = currentPlayer;
     setValues(updated);
+    setPlayer(currentPlayer == "X" ? "O" : "X");
   };
 
   return (
