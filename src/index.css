@@ -1,3 +1,12 @@
+body {
+  background-color: rgb(242, 243, 244);
+}
+
+.layout {
+  max-width: 615px;
+  margin: 0 auto;
+}
+
 .grid {
   width: 600px;
   height: 600px;
