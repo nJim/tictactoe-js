@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Nav from "./Nav";
+import Header from "./Header";
 import Board from "./Board";
 import Footer from "./Footer";
 import Welcome from "./Welcome";
@@ -9,7 +9,7 @@ import Welcome from "./Welcome";
 const App = () => (
   <Router>
     <div className="layout">
-      <Nav />
+      <Header />
       <Switch>
         <Route path="/about">
           <>about</>

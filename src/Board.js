@@ -12,7 +12,7 @@ const Board = () => {
     const updated = [...values];
     updated[id] = currentPlayer;
     setValues(updated);
-    setPlayer(currentPlayer == "X" ? "O" : "X");
+    setPlayer(currentPlayer === "X" ? "O" : "X");
   };
 
   const handleClear = () => {

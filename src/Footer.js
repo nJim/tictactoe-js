@@ -2,7 +2,7 @@ import React from "react";
 
 const Footer = () => (
   <>
-    <a href="">Jim Vomero</a>
+    <a href="http://www.jimvomero.com">Jim Vomero</a>
   </>
 );
 
