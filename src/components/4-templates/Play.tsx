@@ -8,7 +8,7 @@ const Play = () => {
   const [values, setValues] = useState(initValues);
   const [currentPlayer, setPlayer] = useState(initPlayer);
 
-  const handleClick = (id) => {
+  const handleClick = (id: number) => {
     const updated = [...values];
     updated[id] = currentPlayer;
     setValues(updated);

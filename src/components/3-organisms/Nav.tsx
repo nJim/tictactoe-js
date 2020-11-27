@@ -6,7 +6,7 @@ import useToggle from "../../useToggle";
 const Nav = () => {
   const [menuState, toggleState] = useToggle();
   const handleToggle = () => toggleState();
-  const handleClose = () => toggleState(0);
+  const handleClose = () => toggleState();
   return (
     <nav className="nav">
       <NavLinks menuState={menuState} handleClose={handleClose} />

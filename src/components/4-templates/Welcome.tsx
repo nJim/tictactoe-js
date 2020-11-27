@@ -3,7 +3,7 @@ import Grid from "../3-organisms/Grid";
 
 const Welcome = () => {
   const values = ["T", "I", "C", "T", "A", "C", "T", "O", "E"];
-  const handleClick = null;
+  const handleClick = () => {};
   return (
     <>
       <Grid handleClick={handleClick} values={values} />
