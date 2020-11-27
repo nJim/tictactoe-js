@@ -1,5 +1,5 @@
 import React from "react";
-import Box from "./Box";
+import Box from "../2-molecules/Box";
 
 const Grid = ({ handleClick, values }) => (
   <div className="grid">

@@ -1,14 +1,14 @@
 import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import "./App.css";
-import Header from "./Header";
-import Board from "./Board";
-import Footer from "./Footer";
-import Welcome from "./Welcome";
+import Header from "../3-organisms/Header";
+import Footer from "../3-organisms/Footer";
+import Play from "../4-templates/Play";
+import Welcome from "../4-templates/Welcome";
 
 const App = () => (
   <Router>
-    <div className="layout">
+    <div className="app">
       <Header />
       <Switch>
         <Route path="/about">
@@ -18,7 +18,7 @@ const App = () => (
           <>about</>
         </Route>
         <Route path="/play">
-          <Board />
+          <Play />
         </Route>
         <Route path="/">
           <Welcome />

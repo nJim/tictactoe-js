@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Grid from "./Grid";
+import Grid from "../3-organisms/Grid";
 
-const Board = () => {
+const Play = () => {
   const initValues = Array(9).fill(null);
   const initPlayer = () => ["X", "O"][Math.floor(Math.random() * 2)];
 
@@ -29,4 +29,4 @@ const Board = () => {
   );
 };
 
-export default Board;
+export default Play;

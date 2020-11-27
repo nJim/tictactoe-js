@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "./Nav";
+import Nav from "../2-molecules/Nav";
 
 const Header = () => (
   <div className="header">
