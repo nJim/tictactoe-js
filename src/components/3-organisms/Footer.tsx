@@ -1,9 +1,10 @@
-import React, { Fragment } from "react";
+import React from "react";
+import "./Footer.css";
 
 const Footer = () => (
-  <Fragment>
-    <a href="http://www.jimvomero.com">Jim Vomero</a>
-  </Fragment>
+  <div className="footer">
+    React project by <a href="http://www.jimvomero.com">Jim Vomero</a>
+  </div>
 );
 
 export default Footer;

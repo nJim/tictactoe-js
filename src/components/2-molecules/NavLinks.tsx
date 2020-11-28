@@ -9,7 +9,7 @@ const NavLinks = ({menuState, handleClose}: Props) => {
       <NavLink url="/" label="Home" />
       <NavLink url="/play" label="Play" />
       <NavLink url="/about" label="About" />
-      <NavLink url="/users" label="Settings" />
+      <NavLink url="/settings" label="Settings" />
     </ul>
   );
 }
