@@ -1,5 +1,5 @@
 import React from "react";
-import Grid from "../3-organisms/Grid";
+import Grid from "../3-organisms/Board";
 
 const Welcome = () => {
   const values = ["T", "I", "C", "T", "A", "C", "T", "O", "E"];

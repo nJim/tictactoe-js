@@ -1,4 +1,5 @@
 import React from "react";
+import "./Box.css";
 
 const Box = ({ id, value, handleClick }: Props) => (
   <div onClick={() => (value ? null : handleClick(id))} className="box">

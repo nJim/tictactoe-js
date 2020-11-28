@@ -1,8 +1,9 @@
 import React from "react";
 import Box from "../2-molecules/Box";
+import "./Board.css";
 
-const Grid = ({ handleClick, values }: Props) => (
-  <div className="grid">
+const Board = ({ handleClick, values }: Props) => (
+  <div className="board">
     {[...Array(9).keys()].map((i) => (
       <Box key={i} id={i} handleClick={handleClick} value={values[i]} />
     ))}
@@ -14,4 +15,4 @@ type Props = {
   values: Array<string>,
 }
 
-export default Grid;
+export default Board;

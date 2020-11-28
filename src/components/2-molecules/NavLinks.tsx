@@ -1,5 +1,6 @@
 import React from "react";
 import NavLink from "../1-atoms/NavLink";
+import "./NavLinks.css";
 
 const NavLinks = ({menuState, handleClose}: Props) => {
   const animation = () => (menuState ? "fadeIn" : "fadeOut");

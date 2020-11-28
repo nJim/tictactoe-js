@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './components/5-app/App';
 import * as serviceWorker from './serviceWorker';
+import './components/0-base/global.css';
 
 ReactDOM.render(
   <React.StrictMode>

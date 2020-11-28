@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Grid from "../3-organisms/Grid";
+import Board from "../3-organisms/Board";
 
 const Play = () => {
   const initValues = Array(9).fill(null);
@@ -22,7 +22,7 @@ const Play = () => {
 
   return (
     <>
-      <Grid handleClick={handleClick} values={values} />
+      <Board handleClick={handleClick} values={values} />
       <button onClick={handleClear}>New Game</button>
       <div>Your move: {currentPlayer}</div>
     </>

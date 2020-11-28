@@ -2,6 +2,7 @@ import React from "react";
 import NavIcon from "../1-atoms/NavIcon";
 import NavLinks from "../2-molecules/NavLinks";
 import useToggle from "../../useToggle";
+import "./Nav.css";
 
 const Nav = () => {
   const [menuState, toggleState] = useToggle();

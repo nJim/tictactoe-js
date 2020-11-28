@@ -1,4 +1,5 @@
 import React from "react";
+import "./NavIcon.css";
 
 const NavIcon = ({menuState, handleToggle}: Props) => {
   const menuClass = () => (menuState ? "open" : "");
