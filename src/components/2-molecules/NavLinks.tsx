@@ -2,8 +2,11 @@ import React from "react";
 import NavLink from "../1-atoms/NavLink";
 import "./NavLinks.css";
 
-const NavLinks = ({menuState, handleClose}: Props) => {
-  const animation = () => (menuState ? "fadeIn" : "fadeOut");
+const NavLinks = ({init, menuState, handleClose}: Props) => {
+  const animation = () => {
+    if (init) return '';
+    return menuState ? "fadeIn" : "fadeOut"
+  }
   return (
     <ul className={`nav__links ${animation()}`} onClick={handleClose}>
       <NavLink url="/" label="Home" />
@@ -15,6 +18,7 @@ const NavLinks = ({menuState, handleClose}: Props) => {
 }
 
 type Props = {
+  init: boolean,
   menuState: boolean,
   handleClose: () => void
 }

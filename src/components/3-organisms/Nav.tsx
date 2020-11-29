@@ -1,16 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import NavIcon from "../1-atoms/NavIcon";
 import NavLinks from "../2-molecules/NavLinks";
 import useToggle from "../../useToggle";
 import "./Nav.css";
 
 const Nav = () => {
+  const [init, setInit] = useState(true);
   const [menuState, toggleState] = useToggle();
-  const handleToggle = () => toggleState();
   const handleClose = () => toggleState();
+  const handleToggle = () => {
+    setInit(false);
+    toggleState();
+  }
+
   return (
     <nav className="nav">
-      <NavLinks menuState={menuState} handleClose={handleClose} />
+      <NavLinks
+        init={init}
+        menuState={menuState}
+        handleClose={handleClose}
+      />
       <NavIcon menuState={menuState} handleToggle={handleToggle} />
     </nav>
   );
