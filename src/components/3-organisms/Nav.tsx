@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import NavIcon from "../1-atoms/NavIcon";
 import NavLinks from "../2-molecules/NavLinks";
+import Logo from "../2-molecules/Logo";
 import useToggle from "../../useToggle";
 import "./Nav.css";
 
@@ -15,11 +16,8 @@ const Nav = () => {
 
   return (
     <nav className="nav">
-      <NavLinks
-        init={init}
-        menuState={menuState}
-        handleClose={handleClose}
-      />
+      <Logo />
+      <NavLinks init={init} menuState={menuState} handleClose={handleClose} />
       <NavIcon menuState={menuState} handleToggle={handleToggle} />
     </nav>
   );
