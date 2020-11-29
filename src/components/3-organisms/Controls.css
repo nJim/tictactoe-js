@@ -1,0 +1,24 @@
+.controls {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.controls__item {
+  padding: 15px 10px 10px 10px;
+  text-align: center;
+  align-items: center;
+}
+
+.controls__icon {
+  width: 17px;
+  margin-right: 5px;
+}
+
+.controls__symbol {
+  display: inline-block;
+  min-width: 25px;
+}
+
+.controls__reset {
+  cursor: pointer;
+}

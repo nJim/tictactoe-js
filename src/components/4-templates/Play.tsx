@@ -1,30 +1,38 @@
 import React, { useState } from "react";
 import Board from "../3-organisms/Board";
+import Controls from "../3-organisms/Controls";
 
 const Play = () => {
   const initValues = Array(9).fill(null);
   const initPlayer = () => ["X", "O"][Math.floor(Math.random() * 2)];
+  const initTurn = 1;
 
   const [values, setValues] = useState(initValues);
-  const [currentPlayer, setPlayer] = useState(initPlayer);
+  const [player, setPlayer] = useState(initPlayer);
+  const [turn, setTurn] = useState(initTurn);
 
   const handleClick = (id: number) => {
     const updated = [...values];
-    updated[id] = currentPlayer;
+    updated[id] = player;
     setValues(updated);
-    setPlayer(currentPlayer === "X" ? "O" : "X");
+    setPlayer(player === "X" ? "O" : "X");
+    setTurn(Math.min(turn + 1, 9));
   };
 
   const handleClear = () => {
     setValues(initValues);
     setPlayer(initPlayer);
+    setTurn(1);
   };
 
   return (
     <>
       <Board handleClick={handleClick} values={values} />
-      <button onClick={handleClear}>New Game</button>
-      <div>Your move: {currentPlayer}</div>
+      <Controls
+        player={player}
+        handleClear={handleClear}
+        turn={turn}
+      />
     </>
   );
 };
