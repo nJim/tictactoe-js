@@ -1,9 +1,10 @@
 import React, { useState } from "react";
 import Board from "../3-organisms/Board";
 import Controls from "../3-organisms/Controls";
+import isOutOfMoves from "../../lib/isOutOfMoves";
 
 const Play = () => {
-  const initValues = Array(9).fill(null);
+  const initValues = Array(8).fill(null);
   const initPlayer = () => ["X", "O"][Math.floor(Math.random() * 2)];
   const initTurn = 1;
 
@@ -17,6 +18,8 @@ const Play = () => {
     setValues(updated);
     setPlayer(player === "X" ? "O" : "X");
     setTurn(Math.min(turn + 1, 9));
+    console.log(isOutOfMoves(values));
+    console.log(values);
   };
 
   const handleClear = () => {
