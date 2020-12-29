@@ -25,14 +25,14 @@ describe("check things", () => {
     ];
     expect(hasWinner(values)).toBeFalsy();
   });
-  // test("big old test", () => {
-  //   const values = [
-  //     "O", "X", "X",
-  //     "X", "X", "O",
-  //     "O", "O", "X"
-  //   ];
-  //   expect(hasWinner(values)).toBeFalsy();
-  // });
+  test("No winner with Xs breaking rows", () => {
+    const values = [
+      "O", "X", "X",
+      "X", "X", "O",
+      "O", "O", "X"
+    ];
+    expect(hasWinner(values)).toBeFalsy();
+  });
   test("Has winner in column", () => {
     const values = [
       "X", null, null,
@@ -43,8 +43,8 @@ describe("check things", () => {
   });
   test("Has winner in row", () => {
     const values = [
-      "X", "X", "X",
       null, null, null,
+      "X", "X", "X",
       null, null, null
     ];
     expect(hasWinner(values)).toBeTruthy();
