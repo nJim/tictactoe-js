@@ -7,19 +7,22 @@ import Play from "../4-templates/Play";
 import AboutPage from "../4-templates/AboutPage";
 import WelcomePage from "../4-templates/WelcomePage";
 import SettingsPage from "../4-templates/SettingsPage";
+import State from "../../lib/hoc/State";
 
 const App = () => (
   <Router>
-    <div className="app">
-      <Header />
-      <Switch>
-        <Route path="/about"><AboutPage /></Route>
-        <Route path="/settings"><SettingsPage /></Route>
-        <Route path="/play"><Play /></Route>
-        <Route path="/"><WelcomePage /></Route>
-      </Switch>
-      <Footer />
-    </div>
+    <State>
+      <div className="app">
+        <Header />
+        <Switch>
+          <Route path="/about"><AboutPage /></Route>
+          <Route path="/settings"><SettingsPage /></Route>
+          <Route path="/play"><Play /></Route>
+          <Route path="/"><WelcomePage /></Route>
+        </Switch>
+        <Footer />
+      </div>
+    </State>
   </Router>
 );
 

@@ -1,9 +1,17 @@
 import React, { useState } from "react";
 import Board from "../3-organisms/Board";
 import Controls from "../3-organisms/Controls";
-import isOutOfMoves from "../../lib/isOutOfMoves";
+import isOutOfMoves from "../../lib/utils/isOutOfMoves";
+
+import {useContext} from 'react';
+import {Context} from "../../lib/hoc/State";
+
 
 const Play = () => {
+  const {state, dispatch} = useContext(Context);
+  console.log(state);
+  console.log(dispatch);
+
   const initValues = Array(8).fill(null);
   const initPlayer = () => ["X", "O"][Math.floor(Math.random() * 2)];
   const initTurn = 1;
