@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, Dispatch } from "react";
+import React, { createContext, useReducer, Dispatch, useContext } from "react";
 
 export type StateType = {
   player1: string,
@@ -31,6 +31,29 @@ const State = ({children}: any) => {
 
 export const Context = createContext<ContextType>(initialContext);
 export default State;
+
+export const useGameStateContext = () => {
+    const state = useContext(Context);
+
+    if (state === undefined) {
+      throw new Error("must be used within a Provider");
+    }
+
+    return state;
+  };
+
+//   const useGameDispatchContext = () => {
+//     const dispatch = useContext(DispatchContext);
+
+//     if (dispatch === undefined) {
+//       throw new Error("must be used within a Provider");
+//     }
+
+//     return dispatch;
+//   };
+
+//   export { useGameDispatchContext, useGameStateContext };
+
 
 const Reducer = (state: any, action: any) => {
     switch (action.type) {
