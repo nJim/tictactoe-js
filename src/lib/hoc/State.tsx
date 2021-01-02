@@ -32,52 +32,16 @@ const State = ({children}: any) => {
 export const Context = createContext<ContextType>(initialContext);
 export default State;
 
-export const useGameStateContext = () => {
-    const state = useContext(Context);
-
-    if (state === undefined) {
-      throw new Error("must be used within a Provider");
-    }
-
-    return state;
-  };
-
-//   const useGameDispatchContext = () => {
-//     const dispatch = useContext(DispatchContext);
-
-//     if (dispatch === undefined) {
-//       throw new Error("must be used within a Provider");
-//     }
-
-//     return dispatch;
-//   };
-
-//   export { useGameDispatchContext, useGameStateContext };
-
+export const useAppContext = () => useContext(Context);
 
 const Reducer = (state: any, action: any) => {
     switch (action.type) {
-        case 'SET_POSTS':
-            return {
-                ...state,
-                posts: action.payload
-            };
-      //   case 'ADD_POST':
-      //       return {
-      //           ...state,
-      //           posts: state.posts.concat(action.payload)
-      //       };
-      //   case 'REMOVE_POST':
-      //       return {
-      //           ...state,
-      //           posts: state.posts.filter(post => post.id !== action.payload)
-      //       };
-      //   case 'SET_ERROR':
-      //       return {
-      //           ...state,
-      //           error: action.payload
-      //       };
+        case 'SET_PLAYER_ICON':
+          return {
+            ...state,
+            [action.player]: action.icon
+          };
         default:
-            return state;
+          return state;
     }
   };

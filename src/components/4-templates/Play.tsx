@@ -2,12 +2,10 @@ import React, { useState } from "react";
 import Board from "../3-organisms/Board";
 import Controls from "../3-organisms/Controls";
 import isOutOfMoves from "../../lib/utils/isOutOfMoves";
-import {useGameStateContext} from "../../lib/hoc/State";
+// import {useAppContext} from "../../lib/hoc/State";
 
 const Play = () => {
-  const {state, dispatch} = useGameStateContext();
-  console.log(state);
-  console.log(dispatch);
+  // const {state, dispatch} = useAppContext();
 
   const initValues = Array(8).fill(null);
   const initPlayer = () => ["X", "O"][Math.floor(Math.random() * 2)];

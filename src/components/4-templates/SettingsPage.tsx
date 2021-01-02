@@ -2,11 +2,21 @@ import React from "react";
 import RadioButton from "../2-molecules/RadioButton";
 import Border from "../3-organisms/Border";
 import PlayerSelect from "../3-organisms/PlayerSelect";
-import {useGameStateContext} from "../../lib/hoc/State";
+import {useAppContext} from "../../lib/hoc/State";
 
 const SettingsPage = () => {
-  const {state} = useGameStateContext();
-  console.log(state);
+  // The state and dispatcher used for app-wide storage.
+  const {state, dispatch} = useAppContext();
+
+  // Update app state when changing player icons.
+  const onChange = (e:any) => {
+    dispatch({
+      type: 'SET_PLAYER_ICON',
+      player: e.currentTarget.name,
+      icon: e.currentTarget.value
+    });
+  };
+
   return (
     <Border>
       <div>
@@ -17,16 +27,20 @@ const SettingsPage = () => {
               key={`p1${index}`}
               id={`p1${index}`}
               value={icon}
+              onChange={onChange}
+              checked={icon === state.player1}
             />
           ))}
         </PlayerSelect>
         <PlayerSelect title="Player Two">
           {icons.p2.map((icon, index) => (
             <RadioButton
-              name="player1"
+              name="player2"
               key={`p2${index}`}
               id={`p2${index}`}
               value={icon}
+              onChange={onChange}
+              checked={icon === state.player2}
             />
           ))}
         </PlayerSelect>
