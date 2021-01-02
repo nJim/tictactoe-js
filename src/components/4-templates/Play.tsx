@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Board from "../3-organisms/Board";
 import Controls from "../3-organisms/Controls";
-import { useAppContext } from "../../lib/hoc/State";
+import { useAppContext } from "../../lib/hooks/useAppContext";
 
 const Play = () => {
   // The state used for app-wide storage.

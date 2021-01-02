@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import NavIcon from "../1-atoms/NavIcon";
 import NavLinks from "../2-molecules/NavLinks";
 import Logo from "../2-molecules/Logo";
-import useToggle from "../../useToggle";
+import useToggle from "../../lib/hooks/useToggle";
 import "./Nav.css";
 
 const Nav = () => {

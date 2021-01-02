@@ -1,4 +1,4 @@
-import React, { createContext, useReducer, Dispatch, useContext } from "react";
+import React, { createContext, useReducer, Dispatch, } from "react";
 
 export type StateType = {
   player1: string,
@@ -10,12 +10,12 @@ export type ContextType = {
   dispatch: Dispatch<any>
 }
 
-const initialState = {
+export const initialState = {
   player1: 'X',
   player2: 'O'
 };
 
-let initialContext = {
+export const initialContext = {
   state: initialState,
   dispatch: (() => {return}),
 }
@@ -30,18 +30,17 @@ const State = ({children}: any) => {
 };
 
 export const Context = createContext<ContextType>(initialContext);
+
 export default State;
 
-export const useAppContext = () => useContext(Context);
-
 const Reducer = (state: any, action: any) => {
-    switch (action.type) {
-        case 'SET_PLAYER_ICON':
-          return {
-            ...state,
-            [action.player]: action.icon
-          };
-        default:
-          return state;
-    }
-  };
+switch (action.type) {
+  case 'SET_PLAYER_ICON':
+    return {
+      ...state,
+      [action.player]: action.icon
+    };
+  default:
+    return state;
+  }
+};

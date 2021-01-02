@@ -2,7 +2,7 @@ import React from "react";
 import RadioButtons from "../3-organisms/RadioButtons";
 import Border from "../3-organisms/Border";
 import PlayerSelect from "../3-organisms/PlayerSelect";
-import { useAppContext } from "../../lib/hoc/State";
+import { useAppContext } from "../../lib/hooks/useAppContext";
 import { icons } from "../../lib/assets/icons";
 
 const SettingsPage = () => {
