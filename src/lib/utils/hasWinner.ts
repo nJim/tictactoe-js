@@ -1,6 +1,6 @@
-const hasWinner = (values: Array<string|null>) => {
+const hasWinner = (values: Array<string|null>, player: string) => {
   const stringify = stringifyBoard(values);
-  const regex = getRegex('X');
+  const regex = getRegex(player);
   return regex.test(String(stringify));
 }
 

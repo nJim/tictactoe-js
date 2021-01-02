@@ -7,7 +7,7 @@ describe("check things", () => {
       null, null, null,
       null, null, null
     ];
-    expect(hasWinner(values)).toBeFalsy();
+    expect(hasWinner(values, "X")).toBeFalsy();
   });
   test("No winner with empty spaces", () => {
     const values = [
@@ -15,7 +15,7 @@ describe("check things", () => {
       "X", null, null,
       "X", null, null
     ];
-    expect(hasWinner(values)).toBeFalsy();
+    expect(hasWinner(values, "X")).toBeFalsy();
   });
   test("No winner with full card", () => {
     const values = [
@@ -23,7 +23,7 @@ describe("check things", () => {
       "X", "O", "O",
       "X", "O", "X"
     ];
-    expect(hasWinner(values)).toBeFalsy();
+    expect(hasWinner(values, "X")).toBeFalsy();
   });
   test("No winner with Xs breaking rows", () => {
     const values = [
@@ -31,7 +31,7 @@ describe("check things", () => {
       "X", "X", "O",
       "O", "O", "X"
     ];
-    expect(hasWinner(values)).toBeFalsy();
+    expect(hasWinner(values, "X")).toBeFalsy();
   });
   test("Has winner in column", () => {
     const values = [
@@ -39,7 +39,7 @@ describe("check things", () => {
       "X", null, null,
       "X", null, null
     ];
-    expect(hasWinner(values)).toBeTruthy();
+    expect(hasWinner(values, "X")).toBeTruthy();
   });
   test("Has winner in row", () => {
     const values = [
@@ -47,7 +47,7 @@ describe("check things", () => {
       "X", "X", "X",
       null, null, null
     ];
-    expect(hasWinner(values)).toBeTruthy();
+    expect(hasWinner(values, "X")).toBeTruthy();
   });
   test("Has winner in diagonal l2r", () => {
     const values = [
@@ -55,7 +55,7 @@ describe("check things", () => {
       null, "X", null,
       null, null, "X"
     ];
-    expect(hasWinner(values)).toBeTruthy();
+    expect(hasWinner(values, "X")).toBeTruthy();
   });
   test("Has winner in diagonal r2l", () => {
     const values = [
@@ -63,6 +63,6 @@ describe("check things", () => {
       null, "X", null,
       "X", null, null
     ];
-    expect(hasWinner(values)).toBeTruthy();
+    expect(hasWinner(values, "X")).toBeTruthy();
   });
 });
