@@ -1,10 +1,10 @@
-const hasWinner = (values: Array<string|null>, player: string) => {
+const isWinner = (values: Array<string|null>, player: string) => {
   const stringify = stringifyBoard(values);
   const regex = getRegex(player);
   return regex.test(String(stringify));
 }
 
-export default hasWinner;
+export default isWinner;
 
 const stringifyBoard = (values: Array<string|null>) => (
   values.reduce((accumulator, currentValue) => {
