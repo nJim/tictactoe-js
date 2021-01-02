@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactChild } from "react";
 import "./PlayerSelect.css";
 
 const PlayerSelect = ({title, children}: Props) => {
@@ -14,7 +14,7 @@ const PlayerSelect = ({title, children}: Props) => {
 
 type Props = {
   title: string,
-  children: any
+  children: ReactChild
 }
 
 export default PlayerSelect;

@@ -1,8 +1,9 @@
 import React from "react";
-import RadioButton from "../2-molecules/RadioButton";
+import RadioButtons from "../3-organisms/RadioButtons";
 import Border from "../3-organisms/Border";
 import PlayerSelect from "../3-organisms/PlayerSelect";
-import {useAppContext} from "../../lib/hoc/State";
+import { useAppContext } from "../../lib/hoc/State";
+import { icons } from "../../lib/assets/icons";
 
 const SettingsPage = () => {
   // The state and dispatcher used for app-wide storage.
@@ -21,37 +22,24 @@ const SettingsPage = () => {
     <Border>
       <div>
         <PlayerSelect title="Player One">
-          {icons.p1.map((icon, index) => (
-            <RadioButton
-              name="player1"
-              key={`p1${index}`}
-              id={`p1${index}`}
-              value={icon}
-              onChange={onChange}
-              checked={icon === state.player1}
-            />
-          ))}
+          <RadioButtons
+            name="player1"
+            icons={icons.player1}
+            onChange={onChange}
+            active={state.player1}
+          />
         </PlayerSelect>
         <PlayerSelect title="Player Two">
-          {icons.p2.map((icon, index) => (
-            <RadioButton
-              name="player2"
-              key={`p2${index}`}
-              id={`p2${index}`}
-              value={icon}
-              onChange={onChange}
-              checked={icon === state.player2}
-            />
-          ))}
+          <RadioButtons
+            name="player2"
+            icons={icons.player2}
+            onChange={onChange}
+            active={state.player2}
+          />
         </PlayerSelect>
       </div>
     </Border>
   )
-};
-
-const icons = {
-  p1: ["X", "☻", "♪", "♣", "◐", "🙂", "🥵", "🤘", "🦊", "🍕"],
-  p2: ["O", "☺", "♬", "♠", "◑", "🙃", "🥶", "👊", "🐨", "🌮"]
 };
 
 export default SettingsPage;

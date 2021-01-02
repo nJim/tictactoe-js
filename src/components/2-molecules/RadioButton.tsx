@@ -1,7 +1,7 @@
 import React, { EventHandler } from "react";
 
 const RadioButton = ({ id, value, name, checked, onChange }: Props) => (
-  <div className="radio-button">
+  <div className={checked ? "radio-button checked" : "radio-button"}>
     <input
       id={id}
       type="radio"
