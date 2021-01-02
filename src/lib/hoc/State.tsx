@@ -1,8 +1,11 @@
 import React, { createContext, useReducer, Dispatch, } from "react";
 
 export type StateType = {
-  player1: string,
-  player2: string
+  icon1: string,
+  icon2: string,
+  turn: number,
+  values: Array<any>,
+  player: string,
 }
 
 export type ContextType = {
@@ -11,8 +14,11 @@ export type ContextType = {
 }
 
 export const initialState = {
-  player1: 'X',
-  player2: 'O'
+  icon1: 'X',
+  icon2: 'O',
+  turn: 1,
+  values: Array(8).fill(""),
+  player: 'X'
 };
 
 export const initialContext = {
@@ -35,6 +41,13 @@ export default State;
 
 const Reducer = (state: any, action: any) => {
 switch (action.type) {
+  case 'MOVE':
+    return {
+      ...state,
+      turn: incTurn(state.turn),
+      values: updateValues(action.boxId, state.player, state.values),
+      player: togglePlayer(state),
+    };
   case 'SET_PLAYER_ICON':
     return {
       ...state,
@@ -44,3 +57,14 @@ switch (action.type) {
     return state;
   }
 };
+
+const incTurn = (turn: number): number => Math.min(turn + 1, 9);
+
+const togglePlayer = (state: StateType): string =>
+  state.player === state.icon1 ? state.icon2 : state.icon1;
+
+const updateValues = (boxId: any, player: any, values: any) => {
+  const updated = [...values];
+  updated[boxId] = player;
+  return updated;
+}

@@ -26,7 +26,7 @@ const SettingsPage = () => {
             name="player1"
             icons={icons.player1}
             onChange={onChange}
-            active={state.player1}
+            active={state.icon1}
           />
         </PlayerSelect>
         <PlayerSelect title="Player Two">
@@ -34,7 +34,7 @@ const SettingsPage = () => {
             name="player2"
             icons={icons.player2}
             onChange={onChange}
-            active={state.player2}
+            active={state.icon2}
           />
         </PlayerSelect>
       </div>
