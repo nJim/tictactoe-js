@@ -9,6 +9,7 @@ export type StateType = {
   turn: number,
   values: Array<any>,
   player: string,
+  winner: string|undefined,
 }
 
 /**

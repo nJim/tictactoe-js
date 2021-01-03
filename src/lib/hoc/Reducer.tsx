@@ -1,4 +1,4 @@
-import { updateValue, incTurn, togglePlayer } from "../utils";
+import { updateValue, incTurn, togglePlayer, hasWinner } from "../utils";
 import { initialState } from "./State";
 import type { StateType, ActionType } from "../types";
 
@@ -20,11 +20,13 @@ const Reducer = (state: StateType, action: ActionType): StateType => {
       // Increment the turn counter by one.
       // Save the move to the values array.
       // Switch players to start the next turn.
+      const updated = updateValue(action.boxId, state.player, state.values);
       return {
         ...state,
         turn: incTurn(state.turn),
-        values: updateValue(action.boxId, state.player, state.values),
+        values: updated,
         player: togglePlayer(state),
+        winner: hasWinner(updated, [state.icon1, state.icon2]),
       };
     case 'SET_PLAYER_ICON':
       // ACTION: Set a player icon.
@@ -39,8 +41,13 @@ const Reducer = (state: StateType, action: ActionType): StateType => {
       };
     case 'CLEAR':
       // ACTION: Clear and reset game.
-      // Reset app state initial values.
-      return initialState;
+      // Reset app state initial values except icons.
+      return {
+        ...initialState,
+        icon1: state.icon1,
+        icon2: state.icon2,
+        player: state.icon1,
+      };
     default:
       return state;
   }

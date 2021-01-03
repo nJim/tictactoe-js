@@ -9,6 +9,7 @@ export const initialState = {
   turn: 1,
   values: Array(8).fill(""),
   player: 'X',
+  winner: undefined,
 };
 
 // Initial app context with empty dispatch.

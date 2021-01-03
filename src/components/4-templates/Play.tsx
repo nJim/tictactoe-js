@@ -8,8 +8,9 @@ const Play = () => {
   const { state, dispatch } = useAppContext();
 
   // Actions to take when a player clicks one of the boxes.
+  // Prevent click event if there is already a winner.
   const handleClick = (id: number) => {
-    dispatch({type: 'MOVE', boxId: id});
+    if (!state.winner) dispatch({type: 'MOVE', boxId: id});
   };
 
   // Actions to take when clicking the clear button.
@@ -22,6 +23,7 @@ const Play = () => {
       <Board handleClick={handleClick} values={state.values} />
       <Controls
         player={state.player}
+        winner={state.winner}
         handleClear={handleClear}
         turn={state.turn}
       />
