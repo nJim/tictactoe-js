@@ -23,7 +23,7 @@ const getRegex = (p: string) => {
   const row2 = '^\\S{3}' + p + p + p;
   const row3 = '^\\S{6}' + p + p + p;
   const diag1 = p + '\\S{3}' + p + '\\S{3}' + p;
-  const diag2 = '\\S{2}' + p + '\\S{1}' + p + '\\S{1}' + p;
+  const diag2 = '^\\S{2}' + p + '\\S{1}' + p + '\\S{1}' + p;
   const tests = [col, row1, row2, row3, diag1, diag2].join("|");
   return new RegExp(tests);
 }

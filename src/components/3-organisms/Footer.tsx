@@ -3,7 +3,8 @@ import "./Footer.css";
 
 const Footer = () => (
   <div className="footer">
-    React project by <a href="http://www.jimvomero.com">Jim Vomero</a>
+    React project by&nbsp;
+    <a className="funderline" href="http://www.jimvomero.com">Jim Vomero</a>
   </div>
 );
 

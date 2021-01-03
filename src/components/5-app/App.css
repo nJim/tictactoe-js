@@ -2,3 +2,7 @@
   max-width: 615px;
   margin: 0 auto;
 }
+
+a.funderline {
+  text-decoration: underline #84a0bc solid;
+}

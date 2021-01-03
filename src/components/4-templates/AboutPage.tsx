@@ -8,7 +8,7 @@ const AboutPage = () => (
       <br /><br />
       Part of this project is to compare ease of development, performance, and build size  between multiple frameworks. I'll publish the findings in a future blog post.
       <br /><br/>
-      <a href="https://github.com/nJim/tictactoe-react">View this project on GitHub</a>.
+      <a className="funderline" href="https://github.com/nJim/tictactoe-react">View this project on GitHub</a>.
     </div>
   </Border>
 );

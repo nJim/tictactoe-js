@@ -38,6 +38,8 @@ const Reducer = (state: StateType, action: ActionType): StateType => {
         [action.player]: action.icon,
         values: Array(8).fill(""),
         player: action.icon,
+        winner: undefined,
+        turn: 1,
       };
     case 'CLEAR':
       // ACTION: Clear and reset game.

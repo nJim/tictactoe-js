@@ -33,6 +33,14 @@ describe("check things", () => {
     ];
     expect(isWinner(values, "X")).toBeFalsy();
   });
+  test("No winner from previous failed test case", () => {
+    const values = [
+      null, "X", "O",
+      "X", "O", "X",
+      null, "X", "O"
+    ];
+    expect(isWinner(values, "X")).toBeFalsy();
+  });
   test("Has winner in column", () => {
     const values = [
       "X", null, null,
