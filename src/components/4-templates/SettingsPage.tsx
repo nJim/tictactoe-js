@@ -23,7 +23,7 @@ const SettingsPage = () => {
       <div>
         <PlayerSelect title="Player One">
           <RadioButtons
-            name="player1"
+            name="icon1"
             icons={icons.player1}
             onChange={onChange}
             active={state.icon1}
@@ -31,7 +31,7 @@ const SettingsPage = () => {
         </PlayerSelect>
         <PlayerSelect title="Player Two">
           <RadioButtons
-            name="player2"
+            name="icon2"
             icons={icons.player2}
             onChange={onChange}
             active={state.icon2}
