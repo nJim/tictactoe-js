@@ -8,6 +8,8 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 Part of this project is to compare ease of development, performance, and build size between multiple frameworks. I'll publish the findings in a future blog post.
 
+![TicTacToe Game](docs/screenshots.gif)
+
 ## Available Scripts
 
 In the project directory, you can run:
