@@ -1,8 +1,8 @@
-import { FunctionalComponent, h } from "preact";
+import { FunctionalComponent, h, Fragment } from "preact";
 import RadioButton from "../2-molecules/RadioButton";
 
-const RadioButtons: FunctionalComponent = ({ name, icons, onChange, active }: Props) => (
-  <>
+const RadioButtons: FunctionalComponent<Props> = ({ name, icons, onChange, active }: Props) => (
+  <Fragment>
     {icons.map((icon, index) => (
       <RadioButton
         name={name}
@@ -13,7 +13,7 @@ const RadioButtons: FunctionalComponent = ({ name, icons, onChange, active }: Pr
         checked={icon === active}
       />
     ))}
-  </>
+  </Fragment>
 );
 //@todo:fixme
 type Props = {

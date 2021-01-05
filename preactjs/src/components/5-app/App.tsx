@@ -4,7 +4,7 @@ import { Route, Router, RouterOnChangeArgs } from "preact-router";
 import WelcomePage from "../4-templates/WelcomePage";
 import AboutPage from "../4-templates/AboutPage";
 import Play from "../4-templates/Play";
-// import Settings from "../../routes/settings";
+import SettingsPage from "../4-templates/SettingsPage";
 import Footer from "../3-organisms/Footer";
 import Header from "../3-organisms/Header";
 import * as style from "./App.css";
@@ -22,7 +22,7 @@ const App: FunctionalComponent = () => {
                 <Route path="/" component={WelcomePage} />
                 <Route path="/about/" component={AboutPage} />
                 <Route path="/play/" component={Play} />
-                {/* <Route path="/settings/" component={Settings} /> */}
+                <Route path="/settings/" component={SettingsPage} />
             </Router>
             <Footer />
         </div>

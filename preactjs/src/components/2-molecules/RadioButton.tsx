@@ -1,7 +1,8 @@
 import { FunctionalComponent, h } from "preact";
+import * as style from "../3-organisms/PlayerSelect.css";
 
-const RadioButton: FunctionalComponent = ({ id, value, name, checked, onChange }: Props) => (
-  <div className={checked ? "radio-button checked" : "radio-button"}>
+const RadioButton: FunctionalComponent<Props> = ({ id, value, name, checked, onChange }: Props) => (
+  <div class={checked ? `${style.radiobutton} ${style.checked}` : style.radiobutton}>
     <input
       id={id}
       type="radio"

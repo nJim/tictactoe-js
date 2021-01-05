@@ -1,11 +1,12 @@
 import { FunctionalComponent, h } from "preact";
 import "./PlayerSelect.css";
+import * as style from "./PlayerSelect.css";
 
-const PlayerSelect: FunctionalComponent = ({title, children}: Props) => {
+const PlayerSelect: FunctionalComponent<Props> = ({title, children}: Props) => {
   return (
-    <fieldset className="player-select">
+    <fieldset class={style.playerselect}>
       <legend>{title}</legend>
-      <div className="player-select__options">
+      <div class={style.playerselect__options}>
         {children}
       </div>
     </fieldset>
