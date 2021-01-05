@@ -1,4 +1,6 @@
-import React, { createContext, useReducer } from "react";
+import { h } from "preact";
+import { useReducer } from 'preact/hooks';
+import { createContext } from "preact-context";
 import Reducer from "./Reducer";
 import type { ContextType } from "../types";
 
