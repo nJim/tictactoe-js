@@ -1,7 +1,7 @@
-import React from "react";
+import { FunctionalComponent, h } from "preact";
 import Border from "../3-organisms/Border";
 
-const AboutPage = () => (
+const AboutPage: FunctionalComponent = () => (
   <Border>
     <div>
       This is a sandbox project for experimenting with React. It&lsquo;s written in TypeScript and includes custom react hooks, context, and state management.

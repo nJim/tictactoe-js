@@ -1,0 +1,17 @@
+body {
+    background: #c9d6ff;
+    background: -webkit-linear-gradient(to right, #c9d6ff, #e2e2e2);
+    background: linear-gradient(to right, #c9d6ff, #e2e2e2);
+    color: #2c3e50;
+    font-family: Helvetica;
+    font-size: 1.5rem;
+}
+
+a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+
+a.funderline {
+    text-decoration: underline #84a0bc solid;
+}

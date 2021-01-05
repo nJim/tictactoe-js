@@ -1,0 +1,33 @@
+fieldset.player-select {
+  border: 0;
+}
+
+.player-select input {
+  visibility: hidden;
+  clip-path: polygon(0 0);
+  width: 1px;
+  height: 1px;
+  margin: 0px;
+}
+
+.player-select label {
+  cursor: pointer;
+}
+
+.player-select__options {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  outline: 3px solid #2c3e50;
+}
+
+.player-select__options .radio-button {
+  font-size: 60px;
+  border: 6px solid #2c3e50;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.player-select__options .radio-button.checked {
+  background-color: #2c3e50;
+}
