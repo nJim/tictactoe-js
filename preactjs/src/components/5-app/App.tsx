@@ -7,6 +7,7 @@ import Play from "../4-templates/Play";
 import SettingsPage from "../4-templates/SettingsPage";
 import Footer from "../3-organisms/Footer";
 import Header from "../3-organisms/Header";
+import State from "../../lib/hoc/State";
 import * as style from "./App.css";
 
 const App: FunctionalComponent = () => {
@@ -16,16 +17,18 @@ const App: FunctionalComponent = () => {
     };
 
     return (
-        <div id={style.app}>
-            <Header />
-            <Router onChange={handleRoute}>
-                <Route path="/" component={WelcomePage} />
-                <Route path="/about/" component={AboutPage} />
-                <Route path="/play/" component={Play} />
-                <Route path="/settings/" component={SettingsPage} />
-            </Router>
-            <Footer />
-        </div>
+        <State>
+            <div id={style.app}>
+                <Header />
+                <Router onChange={handleRoute}>
+                    <Route path="/" component={WelcomePage} />
+                    <Route path="/about/" component={AboutPage} />
+                    <Route path="/play/" component={Play} />
+                    <Route path="/settings/" component={SettingsPage} />
+                </Router>
+                <Footer />
+            </div>
+        </State>
     );
 };
 

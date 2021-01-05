@@ -20,7 +20,6 @@ const Reducer = (state: StateType, action: ActionType): StateType => {
       // Increment the turn counter by one.
       // Save the move to the values array.
       // Switch players to start the next turn.
-      console.log('yolo')
       const updated = updateValue(action.boxId, state.player, state.values);
       return {
         ...state,
