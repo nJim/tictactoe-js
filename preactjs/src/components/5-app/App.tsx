@@ -3,7 +3,7 @@ import { Route, Router, RouterOnChangeArgs } from "preact-router";
 
 import WelcomePage from "../4-templates/WelcomePage";
 import AboutPage from "../4-templates/AboutPage";
-import Play from "../../4-templates/Play";
+import Play from "../4-templates/Play";
 // import Settings from "../../routes/settings";
 import Footer from "../3-organisms/Footer";
 import Header from "../3-organisms/Header";

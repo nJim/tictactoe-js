@@ -3,11 +3,11 @@ import ControlCount from "../2-molecules/ControlCount";
 import ControlPlayer from "../2-molecules/ControlPlayer";
 import ControlReset from "../2-molecules/ControlReset";
 import ControlWinner from "../2-molecules/ControlWinner";
-import "./Controls.css";
+import * as style from "./Controls.css";
 
-const Controls: FunctionalComponent = ({player, winner, handleClear, turn}: Props) => {
+const Controls: FunctionalComponent<Props> = ({player, winner, handleClear, turn}: Props) => {
   return (
-    <div className="controls">
+    <div class={style.controls}>
       <ControlCount turn={turn}/>
       { winner
         ? <ControlWinner winner={winner}/>

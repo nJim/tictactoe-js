@@ -1,4 +1,4 @@
-import { FunctionalComponent, h } from "preact";
+import { FunctionalComponent, Fragment, h } from "preact";
 import Board from "../3-organisms/Board";
 import Controls from "../3-organisms/Controls";
 import { useAppContext } from "../../lib/hooks/useAppContext";
@@ -19,7 +19,7 @@ const Play: FunctionalComponent = () => {
   };
 
   return (
-    <>
+    <Fragment>
       <Board handleClick={handleClick} values={state.values} />
       <Controls
         player={state.player}
@@ -27,7 +27,7 @@ const Play: FunctionalComponent = () => {
         handleClear={handleClear}
         turn={state.turn}
       />
-    </>
+    </Fragment>
   );
 };
 

@@ -1,5 +1,3 @@
-import { Dispatch } from "react";
-
 /**
  * App state object type.
  */
@@ -27,5 +25,5 @@ export type ActionType =
  */
 export type ContextType = {
   state: StateType,
-  dispatch: Dispatch<any>,
+  dispatch: any,
 }

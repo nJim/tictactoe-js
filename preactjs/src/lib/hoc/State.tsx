@@ -1,6 +1,5 @@
-import { h } from "preact";
+import { h, createContext } from "preact";
 import { useReducer } from 'preact/hooks';
-import { createContext } from "preact-context";
 import Reducer from "./Reducer";
 import type { ContextType } from "../types";
 
