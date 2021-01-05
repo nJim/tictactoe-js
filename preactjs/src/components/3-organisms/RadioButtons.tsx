@@ -15,12 +15,12 @@ const RadioButtons: FunctionalComponent<Props> = ({ name, icons, onChange, activ
     ))}
   </Fragment>
 );
-//@todo:fixme
+// @todo: Set event types for onChange handler.
 type Props = {
   name: string,
   icons: Array<string>,
   active: string,
-  onChange?: any//EventHandler<any>
+  onChange?: any
 }
 
 export default RadioButtons;

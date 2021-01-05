@@ -7,7 +7,7 @@ export type StateType = {
   icon1: string,
   icon2: string,
   turn: number,
-  values: Array<any>,
+  values: Array<string>,
   player: string,
   winner: string|undefined,
 }

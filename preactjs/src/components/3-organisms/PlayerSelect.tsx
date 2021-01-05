@@ -1,4 +1,5 @@
 import { FunctionalComponent, h } from "preact";
+import type { ComponentChildren } from "preact";
 import "./PlayerSelect.css";
 import * as style from "./PlayerSelect.css";
 
@@ -13,10 +14,9 @@ const PlayerSelect: FunctionalComponent<Props> = ({title, children}: Props) => {
   );
 }
 
-//@todo:fixme
 type Props = {
   title: string,
-  children: any
+  children: ComponentChildren
 }
 
 export default PlayerSelect;

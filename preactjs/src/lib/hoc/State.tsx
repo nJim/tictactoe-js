@@ -1,4 +1,5 @@
 import { h, createContext } from "preact";
+import type { ComponentChildren } from "preact";
 import { useReducer } from 'preact/hooks';
 import Reducer from "./Reducer";
 import type { ContextType } from "../types";
@@ -27,7 +28,7 @@ export const Context = createContext<ContextType>(initialContext);
 /**
  * Higher Order Component to provide state and dispatcher to the app.
  */
-const State = ({children}: any) => {
+const State = ({children}: {children: ComponentChildren}) => {
   const [state, dispatch] = useReducer(Reducer, initialState);
   return (
     <Context.Provider value={{state, dispatch}}>

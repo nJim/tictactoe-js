@@ -15,13 +15,13 @@ const RadioButton: FunctionalComponent<Props> = ({ id, value, name, checked, onC
   </div>
 );
 
-//todo:fixme
+// @todo: Set event types for onChange handler.
 type Props = {
   id: string,
   value: string,
   name: string,
   checked?: boolean,
-  onChange?: any//EventHandler<any>
+  onChange?: any
 }
 
 export default RadioButton;

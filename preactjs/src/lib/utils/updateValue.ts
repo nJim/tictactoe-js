@@ -1,4 +1,4 @@
-const updateValue = (boxId: any, player: any, values: any) => {
+const updateValue = (boxId: any, player: any, values: Array<string>) => {
   const updated = [...values];
   updated[boxId] = player;
   return updated;
