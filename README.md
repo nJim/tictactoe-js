@@ -1,19 +1,16 @@
-# TicTacToe ReactJS
+# TicTacToe JS Frameworks
 
-This TicTacToe game is a simple sandbox project for experimenting with React. It's written in TypeScript and includes custom react hooks, context, and state management. An atomic-design approach is used to organize TSX files and minimal CSS is added to each component.
+This TicTacToe game is a simple sandbox project to compare ease of development, performance, and build size between multiple JS Frameworks. I want to find which framework is the easiest and most fun to work in, but also compare this against the technical bloat associated with each one. I'll publish the findings in a future blog post.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Current Implementations
 
-## Comparing Frameworks
+- [TicTacToe ReactJS](reactjs/README.md)
+- [TicTacToe PreactJS](preactjs/README.md)
 
-Part of this project is to compare ease of development, performance, and build size between multiple frameworks. I'll publish the findings in a future blog post.
+## Game Screenshots
 
-![TicTacToe Game](docs/screenshots.gif)
+<img alt="TicTacToe Game" src="docs/screenshots.gif" width="400">
 
-## Available Scripts
+## Possible Future Versions
 
-In the project directory, you can run:
-
-- `yarn start`: Runs the app in the development mode.
-- `yarn test`: Launches the test runner in the interactive watch.
-- `yarn build`: Builds the app for production to the `build` folder.
+I'm mostly a backend engineer and am using this project as an excuse to sharpen some of my frontend skills. I hope to create additional versions of this game in: Vanilla JS, Svelte, Vue JS, Angular JS.
