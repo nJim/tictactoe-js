@@ -1,10 +1,12 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/0f3f63d0-62e3-4368-ac57-95fbd5790901/deploy-status)](https://app.netlify.com/sites/vomero-preact/deploys)
+
 # TicTacToe JS Frameworks
 
 This TicTacToe game is a simple sandbox project to compare ease of development, performance, and build size between multiple JS Frameworks. I want to find which framework is the easiest and most fun to work in, but also compare this against the technical bloat associated with each one. I'll publish the findings in a future blog post.
 
 ## Current Implementations
 
-- [TicTacToe ReactJS](reactjs/README.md)
+- [TicTacToe ReactJS](reactjs/README.md) | [Play](https://vomero-preact.netlify.app)
 - [TicTacToe PreactJS](preactjs/README.md)
 
 ## Game Screenshots
