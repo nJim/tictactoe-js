@@ -6,8 +6,8 @@ This TicTacToe game is a simple sandbox project to compare ease of development, 
 
 ## Current Implementations
 
-- [TicTacToe ReactJS](reactjs/README.md) | [Play](https://vomero-preact.netlify.app)
-- [TicTacToe PreactJS](preactjs/README.md)
+- [TicTacToe ReactJS](reactjs/README.md)
+- [TicTacToe PreactJS](preactjs/README.md) | [Play](https://vomero-preact.netlify.app)
 
 ## Game Screenshots
 
